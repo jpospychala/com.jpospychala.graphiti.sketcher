@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="com.jpospychala.graphiti.sketcher.internal.DiagramTypeProvider"
+            id="com.jpospychala.graphiti.sketcher.diagramTypeProvider"
+            name="sketcher">
+         <diagramType
+               id="com.jpospychala.graphiti.sketcher.diagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            id="com.jpospychala.graphiti.sketcher.diagramType"
+            name="Graphiti Sketcher Diagram"
+            type="sketcher">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="sketcher.PropertyContributor">
+         <propertyCategory
+               category="Sketcher"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="sketcher.PropertyContributor">
+         <propertyTab
+               category="Sketcher"
+               id="sketcher.main.tab"
+               label="Main">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="sketcher.PropertyContributor">
+         <propertySection
+               class="com.jpospychala.graphiti.sketcher.internal.properties.AbstractPropertySection"
+               filter="com.jpospychala.graphiti.sketcher.internal.properties.SketcherFilter"
+               id="sketcher.main.tab.section"
+               tab="sketcher.main.tab">
+         </propertySection>
+      </propertySections>
+   </extension>
+
+</plugin>

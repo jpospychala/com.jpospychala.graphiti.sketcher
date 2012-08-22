@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Graphiti Sketcher
+Bundle-SymbolicName: com.jpospychala.graphiti.sketcher;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.jpospychala.graphiti.sketcher.Activator
+Bundle-Vendor: Jacek Pospychala
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.graphiti.ui,
+ org.eclipse.graphiti;bundle-version="0.9.0",
+ org.eclipse.ui.views;bundle-version="3.6.100",
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.5.300",
+ org.eclipse.emf.transaction;bundle-version="1.4.0",
+ org.eclipse.gef;bundle-version="3.8.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
